@@ -12,9 +12,6 @@ User open petclinic website
     Wait Until Element Is Visible    ${imgWelcome}     timeout=5
 
 
-Close all browser
-
-
 
 
 
