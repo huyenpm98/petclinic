@@ -15,16 +15,28 @@ Sc01: Warning message when fill forbidden data
 Sc02: Create owner successfully
     [Tags]     Sc02
     When User create owner first name:"toto", last name:"paul", adress:"une rue", city:"todo", telephone: "0145874563"
-    Then Verify user's information is correct
+    Then Table Owner information should displays
+    And Name should same as Firstname and Lastname filled in previous screen
+    And Address should same as Address filled in previous screen
+    And City should same as City filled in previous screen
+    And Telephone should same as Telephone filled in previous screen
 
 Sc03: Search owner
     [Tags]     Sc03
     ${lastname}=  Generate Random String  10  [LETTERS]
     When User create owner first name:"preData", last name:"${lastname}", adress:"preData", city:"preData", telephone: "0145874565"
-    Then Verify user's information is correct
+    Then Table Owner information should displays
+    And Name should same as Firstname and Lastname filled in previous screen
+    And Address should same as Address filled in previous screen
+    And City should same as City filled in previous screen
+    And Telephone should same as Telephone filled in previous screen
     When User search owner
     And User search for previously created owner
-    Then Verify user's information is correct
+    Then Table Owner information should displays
+    And Name should same as Firstname and Lastname filled in previous screen
+    And Address should same as Address filled in previous screen
+    And City should same as City filled in previous screen
+    And Telephone should same as Telephone filled in previous screen
 
 
 

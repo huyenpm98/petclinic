@@ -1,783 +1,878 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.6 on darwin)" generated="20231116 13:31:15.613" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.6 on darwin)" generated="20231117 11:29:51.699" rpa="false" schemaversion="4">
 <suite id="s1" name="PetClinic" source="/Users/Admin/Documents/Automation/Robot/petclinic/suites/PetClinic.robot">
 <test id="s1-t1" name="Sc01: Warning message when fill forbidden data" line="10">
 <kw name="Given User open &quot;Find owners&quot; menu" library="FindOwnersPage" type="SETUP">
+<doc>Open website
+Click button "Find owners" on navigation bar
+Wait until search owner form displays</doc>
 <kw name="User open petclinic website" library="HomePage">
+<doc>Open and wait until homepage display</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231116 13:31:15.698" level="INFO">Opening browser 'chrome' to base url 'https://petclinic.justdev.tech/'.</msg>
-<status status="PASS" starttime="20231116 13:31:15.698" endtime="20231116 13:31:25.603"/>
+<msg timestamp="20231117 11:29:51.792" level="INFO">Opening browser 'chrome' to base url 'https://petclinic.justdev.tech/'.</msg>
+<status status="PASS" starttime="20231117 11:29:51.792" endtime="20231117 11:30:33.325"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231116 13:31:25.604" endtime="20231116 13:31:26.059"/>
+<status status="PASS" starttime="20231117 11:30:33.326" endtime="20231117 11:30:33.787"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${imgWelcome}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:26.059" endtime="20231116 13:31:26.228"/>
+<status status="PASS" starttime="20231117 11:30:33.787" endtime="20231117 11:30:33.934"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:15.698" endtime="20231116 13:31:26.228"/>
+<status status="PASS" starttime="20231117 11:29:51.792" endtime="20231117 11:30:33.934"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnFindOwners}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:26.228" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
-<status status="PASS" starttime="20231116 13:31:26.228" endtime="20231116 13:31:26.928"/>
+<msg timestamp="20231117 11:30:33.934" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
+<status status="PASS" starttime="20231117 11:30:33.934" endtime="20231117 11:30:34.569"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchOwnerForm}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:26.928" endtime="20231116 13:31:26.981"/>
+<status status="PASS" starttime="20231117 11:30:34.569" endtime="20231117 11:30:34.621"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:15.698" endtime="20231116 13:31:26.981"/>
+<status status="PASS" starttime="20231117 11:29:51.792" endtime="20231117 11:30:34.621"/>
 </kw>
 <kw name="When User create owner first name:&quot;toto&quot;, last name:&quot;paul&quot;, adress:&quot;une rue&quot;, city:&quot;todo&quot;, telephone: &quot;toto&quot;" library="FindOwnersPage" sourcename="User create owner first name:&quot;${firstname}&quot;, last name:&quot;${lastname}&quot;, adress:&quot;${address}&quot;, city:&quot;${city}&quot;, telephone: &quot;${telephone}&quot;">
+<doc>Set global variables for owner information
+Enter info into form and click button "Add owner"</doc>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${firstname}</arg>
 <arg>${firstname}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:26.982" level="INFO">${firstname} = toto</msg>
-<status status="PASS" starttime="20231116 13:31:26.982" endtime="20231116 13:31:26.982"/>
+<msg timestamp="20231117 11:30:34.622" level="INFO">${firstname} = toto</msg>
+<status status="PASS" starttime="20231117 11:30:34.622" endtime="20231117 11:30:34.622"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${lastname}</arg>
 <arg>${lastname}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:26.982" level="INFO">${lastname} = paul</msg>
-<status status="PASS" starttime="20231116 13:31:26.982" endtime="20231116 13:31:26.982"/>
+<msg timestamp="20231117 11:30:34.622" level="INFO">${lastname} = paul</msg>
+<status status="PASS" starttime="20231117 11:30:34.622" endtime="20231117 11:30:34.622"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${address}</arg>
 <arg>${address}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:26.982" level="INFO">${address} = une rue</msg>
-<status status="PASS" starttime="20231116 13:31:26.982" endtime="20231116 13:31:26.982"/>
+<msg timestamp="20231117 11:30:34.622" level="INFO">${address} = une rue</msg>
+<status status="PASS" starttime="20231117 11:30:34.622" endtime="20231117 11:30:34.622"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${city}</arg>
 <arg>${city}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:26.982" level="INFO">${city} = todo</msg>
-<status status="PASS" starttime="20231116 13:31:26.982" endtime="20231116 13:31:26.982"/>
+<msg timestamp="20231117 11:30:34.622" level="INFO">${city} = todo</msg>
+<status status="PASS" starttime="20231117 11:30:34.622" endtime="20231117 11:30:34.622"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${telephone}</arg>
 <arg>${telephone}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:26.982" level="INFO">${telephone} = toto</msg>
-<status status="PASS" starttime="20231116 13:31:26.982" endtime="20231116 13:31:26.982"/>
+<msg timestamp="20231117 11:30:34.622" level="INFO">${telephone} = toto</msg>
+<status status="PASS" starttime="20231117 11:30:34.622" endtime="20231117 11:30:34.622"/>
 </kw>
 <kw name="User click button Add owner" library="FindOwnersPage">
+<doc>Click button "Add owner"</doc>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnAddOwner}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:26.983" level="INFO">Clicking element 'css=a[href='/owners/new']'.</msg>
-<status status="PASS" starttime="20231116 13:31:26.983" endtime="20231116 13:31:27.532"/>
+<msg timestamp="20231117 11:30:34.622" level="INFO">Clicking element 'css=a[href='/owners/new']'.</msg>
+<status status="PASS" starttime="20231117 11:30:34.622" endtime="20231117 11:30:35.139"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${addOwnerForm}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:27.532" endtime="20231116 13:31:27.562"/>
+<status status="PASS" starttime="20231117 11:30:35.139" endtime="20231117 11:30:35.173"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:26.983" endtime="20231116 13:31:27.562"/>
+<status status="PASS" starttime="20231117 11:30:34.622" endtime="20231117 11:30:35.173"/>
 </kw>
 <kw name="User input firstname" library="FindOwnersPage">
 <arg>${firstname}</arg>
+<doc>Enter firstname if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${firstname}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtFirstname}</arg>
 <arg>${firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:27.563" level="INFO">Typing text 'toto' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20231116 13:31:27.563" endtime="20231116 13:31:27.919"/>
+<msg timestamp="20231117 11:30:35.174" level="INFO">Typing text 'toto' into text field 'id=firstName'.</msg>
+<status status="PASS" starttime="20231117 11:30:35.173" endtime="20231117 11:30:35.450"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:27.562" endtime="20231116 13:31:27.919"/>
+<status status="PASS" starttime="20231117 11:30:35.173" endtime="20231117 11:30:35.450"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:27.562" endtime="20231116 13:31:27.919"/>
+<status status="PASS" starttime="20231117 11:30:35.173" endtime="20231117 11:30:35.450"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:27.562" endtime="20231116 13:31:27.919"/>
+<status status="PASS" starttime="20231117 11:30:35.173" endtime="20231117 11:30:35.450"/>
 </kw>
 <kw name="User input lastname" library="FindOwnersPage">
 <arg>${lastname}</arg>
+<doc>Enter lastname if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${lastname}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtLastname}</arg>
 <arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:27.920" level="INFO">Typing text 'paul' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20231116 13:31:27.920" endtime="20231116 13:31:28.068"/>
+<msg timestamp="20231117 11:30:35.451" level="INFO">Typing text 'paul' into text field 'id=lastName'.</msg>
+<status status="PASS" starttime="20231117 11:30:35.451" endtime="20231117 11:30:35.662"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:27.920" endtime="20231116 13:31:28.068"/>
+<status status="PASS" starttime="20231117 11:30:35.450" endtime="20231117 11:30:35.662"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:27.920" endtime="20231116 13:31:28.068"/>
+<status status="PASS" starttime="20231117 11:30:35.450" endtime="20231117 11:30:35.662"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:27.919" endtime="20231116 13:31:28.068"/>
+<status status="PASS" starttime="20231117 11:30:35.450" endtime="20231117 11:30:35.662"/>
 </kw>
 <kw name="User input address" library="FindOwnersPage">
 <arg>${address}</arg>
+<doc>Enter address if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${address}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtAddress}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:28.069" level="INFO">Typing text 'une rue' into text field 'id=address'.</msg>
-<status status="PASS" starttime="20231116 13:31:28.069" endtime="20231116 13:31:28.140"/>
+<msg timestamp="20231117 11:30:35.663" level="INFO">Typing text 'une rue' into text field 'id=address'.</msg>
+<status status="PASS" starttime="20231117 11:30:35.663" endtime="20231117 11:30:35.737"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:28.068" endtime="20231116 13:31:28.140"/>
+<status status="PASS" starttime="20231117 11:30:35.662" endtime="20231117 11:30:35.737"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:28.068" endtime="20231116 13:31:28.140"/>
+<status status="PASS" starttime="20231117 11:30:35.662" endtime="20231117 11:30:35.737"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:28.068" endtime="20231116 13:31:28.140"/>
+<status status="PASS" starttime="20231117 11:30:35.662" endtime="20231117 11:30:35.737"/>
 </kw>
 <kw name="User input city" library="FindOwnersPage">
 <arg>${city}</arg>
+<doc>Enter city if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${city}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtCity}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:28.141" level="INFO">Typing text 'todo' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20231116 13:31:28.141" endtime="20231116 13:31:28.197"/>
+<msg timestamp="20231117 11:30:35.738" level="INFO">Typing text 'todo' into text field 'id=city'.</msg>
+<status status="PASS" starttime="20231117 11:30:35.738" endtime="20231117 11:30:35.781"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:28.141" endtime="20231116 13:31:28.197"/>
+<status status="PASS" starttime="20231117 11:30:35.738" endtime="20231117 11:30:35.781"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:28.141" endtime="20231116 13:31:28.197"/>
+<status status="PASS" starttime="20231117 11:30:35.738" endtime="20231117 11:30:35.781"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:28.140" endtime="20231116 13:31:28.197"/>
+<status status="PASS" starttime="20231117 11:30:35.737" endtime="20231117 11:30:35.781"/>
 </kw>
 <kw name="User input telephone" library="FindOwnersPage">
 <arg>${telephone}</arg>
+<doc>Enter telephone if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${telephone}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtTelephone}</arg>
 <arg>${telephone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:28.198" level="INFO">Typing text 'toto' into text field 'id=telephone'.</msg>
-<status status="PASS" starttime="20231116 13:31:28.198" endtime="20231116 13:31:28.241"/>
+<msg timestamp="20231117 11:30:35.782" level="INFO">Typing text 'toto' into text field 'id=telephone'.</msg>
+<status status="PASS" starttime="20231117 11:30:35.782" endtime="20231117 11:30:35.829"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:28.197" endtime="20231116 13:31:28.241"/>
+<status status="PASS" starttime="20231117 11:30:35.781" endtime="20231117 11:30:35.829"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:28.197" endtime="20231116 13:31:28.241"/>
+<status status="PASS" starttime="20231117 11:30:35.781" endtime="20231117 11:30:35.829"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:28.197" endtime="20231116 13:31:28.241"/>
+<status status="PASS" starttime="20231117 11:30:35.781" endtime="20231117 11:30:35.829"/>
 </kw>
 <kw name="User click button Create owner" library="FindOwnersPage">
+<doc>Click button "Add owner"</doc>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnSubmit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:28.241" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
-<status status="PASS" starttime="20231116 13:31:28.241" endtime="20231116 13:31:28.770"/>
+<msg timestamp="20231117 11:30:35.829" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
+<status status="PASS" starttime="20231117 11:30:35.829" endtime="20231117 11:30:36.289"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:28.241" endtime="20231116 13:31:28.771"/>
+<status status="PASS" starttime="20231117 11:30:35.829" endtime="20231117 11:30:36.289"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:26.982" endtime="20231116 13:31:28.771"/>
+<status status="PASS" starttime="20231117 11:30:34.621" endtime="20231117 11:30:36.289"/>
 </kw>
 <kw name="Then A warning message display &quot;numeric value out of bounds (&lt;10 digits&gt;.&lt;0 digits&gt; expected)&quot;" library="FindOwnersPage" sourcename="A warning message display &quot;${error}&quot;">
+<doc>Verify warning message as expected message</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${msgError}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20231116 13:31:28.788" level="INFO">Element 'css=span.help-inline' is displayed.</msg>
-<status status="PASS" starttime="20231116 13:31:28.771" endtime="20231116 13:31:28.788"/>
+<msg timestamp="20231117 11:30:36.303" level="INFO">Element 'css=span.help-inline' is displayed.</msg>
+<status status="PASS" starttime="20231117 11:30:36.289" endtime="20231117 11:30:36.303"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${msgError}</arg>
 <arg>${error}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:28.789" level="INFO">Verifying element 'css=span.help-inline' contains exact text 'numeric value out of bounds (&lt;10 digits&gt;.&lt;0 digits&gt; expected)'.</msg>
-<status status="PASS" starttime="20231116 13:31:28.788" endtime="20231116 13:31:28.841"/>
+<msg timestamp="20231117 11:30:36.304" level="INFO">Verifying element 'css=span.help-inline' contains exact text 'numeric value out of bounds (&lt;10 digits&gt;.&lt;0 digits&gt; expected)'.</msg>
+<status status="PASS" starttime="20231117 11:30:36.304" endtime="20231117 11:30:36.351"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:28.771" endtime="20231116 13:31:28.841"/>
+<status status="PASS" starttime="20231117 11:30:36.289" endtime="20231117 11:30:36.351"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20231116 13:31:28.842" endtime="20231116 13:31:28.917"/>
+<status status="PASS" starttime="20231117 11:30:36.351" endtime="20231117 11:30:36.429"/>
 </kw>
 <tag>Sc01</tag>
-<status status="PASS" starttime="20231116 13:31:15.697" endtime="20231116 13:31:28.917"/>
+<status status="PASS" starttime="20231117 11:29:51.791" endtime="20231117 11:30:36.429"/>
 </test>
 <test id="s1-t2" name="Sc02: Create owner successfully" line="15">
 <kw name="Given User open &quot;Find owners&quot; menu" library="FindOwnersPage" type="SETUP">
+<doc>Open website
+Click button "Find owners" on navigation bar
+Wait until search owner form displays</doc>
 <kw name="User open petclinic website" library="HomePage">
+<doc>Open and wait until homepage display</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231116 13:31:28.918" level="INFO">Opening browser 'chrome' to base url 'https://petclinic.justdev.tech/'.</msg>
-<status status="PASS" starttime="20231116 13:31:28.918" endtime="20231116 13:31:38.252"/>
+<msg timestamp="20231117 11:30:36.431" level="INFO">Opening browser 'chrome' to base url 'https://petclinic.justdev.tech/'.</msg>
+<status status="PASS" starttime="20231117 11:30:36.430" endtime="20231117 11:30:45.743"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231116 13:31:38.252" endtime="20231116 13:31:38.709"/>
+<status status="PASS" starttime="20231117 11:30:45.744" endtime="20231117 11:30:46.206"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${imgWelcome}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:38.709" endtime="20231116 13:31:38.856"/>
+<status status="PASS" starttime="20231117 11:30:46.206" endtime="20231117 11:30:46.358"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:28.918" endtime="20231116 13:31:38.856"/>
+<status status="PASS" starttime="20231117 11:30:36.430" endtime="20231117 11:30:46.359"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnFindOwners}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:38.856" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
-<status status="PASS" starttime="20231116 13:31:38.856" endtime="20231116 13:31:39.508"/>
+<msg timestamp="20231117 11:30:46.359" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
+<status status="PASS" starttime="20231117 11:30:46.359" endtime="20231117 11:30:47.090"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchOwnerForm}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:39.508" endtime="20231116 13:31:39.554"/>
+<status status="PASS" starttime="20231117 11:30:47.090" endtime="20231117 11:30:47.144"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:28.918" endtime="20231116 13:31:39.554"/>
+<status status="PASS" starttime="20231117 11:30:36.430" endtime="20231117 11:30:47.144"/>
 </kw>
 <kw name="When User create owner first name:&quot;toto&quot;, last name:&quot;paul&quot;, adress:&quot;une rue&quot;, city:&quot;todo&quot;, telephone: &quot;0145874563&quot;" library="FindOwnersPage" sourcename="User create owner first name:&quot;${firstname}&quot;, last name:&quot;${lastname}&quot;, adress:&quot;${address}&quot;, city:&quot;${city}&quot;, telephone: &quot;${telephone}&quot;">
+<doc>Set global variables for owner information
+Enter info into form and click button "Add owner"</doc>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${firstname}</arg>
 <arg>${firstname}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:39.555" level="INFO">${firstname} = toto</msg>
-<status status="PASS" starttime="20231116 13:31:39.554" endtime="20231116 13:31:39.555"/>
+<msg timestamp="20231117 11:30:47.144" level="INFO">${firstname} = toto</msg>
+<status status="PASS" starttime="20231117 11:30:47.144" endtime="20231117 11:30:47.144"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${lastname}</arg>
 <arg>${lastname}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:39.555" level="INFO">${lastname} = paul</msg>
-<status status="PASS" starttime="20231116 13:31:39.555" endtime="20231116 13:31:39.555"/>
+<msg timestamp="20231117 11:30:47.144" level="INFO">${lastname} = paul</msg>
+<status status="PASS" starttime="20231117 11:30:47.144" endtime="20231117 11:30:47.144"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${address}</arg>
 <arg>${address}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:39.555" level="INFO">${address} = une rue</msg>
-<status status="PASS" starttime="20231116 13:31:39.555" endtime="20231116 13:31:39.555"/>
+<msg timestamp="20231117 11:30:47.145" level="INFO">${address} = une rue</msg>
+<status status="PASS" starttime="20231117 11:30:47.144" endtime="20231117 11:30:47.145"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${city}</arg>
 <arg>${city}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:39.555" level="INFO">${city} = todo</msg>
-<status status="PASS" starttime="20231116 13:31:39.555" endtime="20231116 13:31:39.555"/>
+<msg timestamp="20231117 11:30:47.145" level="INFO">${city} = todo</msg>
+<status status="PASS" starttime="20231117 11:30:47.145" endtime="20231117 11:30:47.145"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${telephone}</arg>
 <arg>${telephone}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:39.555" level="INFO">${telephone} = 0145874563</msg>
-<status status="PASS" starttime="20231116 13:31:39.555" endtime="20231116 13:31:39.555"/>
+<msg timestamp="20231117 11:30:47.145" level="INFO">${telephone} = 0145874563</msg>
+<status status="PASS" starttime="20231117 11:30:47.145" endtime="20231117 11:30:47.145"/>
 </kw>
 <kw name="User click button Add owner" library="FindOwnersPage">
+<doc>Click button "Add owner"</doc>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnAddOwner}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:39.555" level="INFO">Clicking element 'css=a[href='/owners/new']'.</msg>
-<status status="PASS" starttime="20231116 13:31:39.555" endtime="20231116 13:31:39.986"/>
+<msg timestamp="20231117 11:30:47.145" level="INFO">Clicking element 'css=a[href='/owners/new']'.</msg>
+<status status="PASS" starttime="20231117 11:30:47.145" endtime="20231117 11:30:47.572"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${addOwnerForm}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:39.986" endtime="20231116 13:31:40.016"/>
+<status status="PASS" starttime="20231117 11:30:47.572" endtime="20231117 11:30:47.605"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:39.555" endtime="20231116 13:31:40.016"/>
+<status status="PASS" starttime="20231117 11:30:47.145" endtime="20231117 11:30:47.605"/>
 </kw>
 <kw name="User input firstname" library="FindOwnersPage">
 <arg>${firstname}</arg>
+<doc>Enter firstname if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${firstname}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtFirstname}</arg>
 <arg>${firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:40.018" level="INFO">Typing text 'toto' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20231116 13:31:40.017" endtime="20231116 13:31:40.277"/>
+<msg timestamp="20231117 11:30:47.606" level="INFO">Typing text 'toto' into text field 'id=firstName'.</msg>
+<status status="PASS" starttime="20231117 11:30:47.606" endtime="20231117 11:30:47.880"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:40.017" endtime="20231116 13:31:40.277"/>
+<status status="PASS" starttime="20231117 11:30:47.605" endtime="20231117 11:30:47.880"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:40.017" endtime="20231116 13:31:40.277"/>
+<status status="PASS" starttime="20231117 11:30:47.605" endtime="20231117 11:30:47.880"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:40.017" endtime="20231116 13:31:40.277"/>
+<status status="PASS" starttime="20231117 11:30:47.605" endtime="20231117 11:30:47.880"/>
 </kw>
 <kw name="User input lastname" library="FindOwnersPage">
 <arg>${lastname}</arg>
+<doc>Enter lastname if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${lastname}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtLastname}</arg>
 <arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:40.277" level="INFO">Typing text 'paul' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20231116 13:31:40.277" endtime="20231116 13:31:40.486"/>
+<msg timestamp="20231117 11:30:47.880" level="INFO">Typing text 'paul' into text field 'id=lastName'.</msg>
+<status status="PASS" starttime="20231117 11:30:47.880" endtime="20231117 11:30:48.102"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:40.277" endtime="20231116 13:31:40.486"/>
+<status status="PASS" starttime="20231117 11:30:47.880" endtime="20231117 11:30:48.102"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:40.277" endtime="20231116 13:31:40.486"/>
+<status status="PASS" starttime="20231117 11:30:47.880" endtime="20231117 11:30:48.102"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:40.277" endtime="20231116 13:31:40.486"/>
+<status status="PASS" starttime="20231117 11:30:47.880" endtime="20231117 11:30:48.102"/>
 </kw>
 <kw name="User input address" library="FindOwnersPage">
 <arg>${address}</arg>
+<doc>Enter address if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${address}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtAddress}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:40.487" level="INFO">Typing text 'une rue' into text field 'id=address'.</msg>
-<status status="PASS" starttime="20231116 13:31:40.487" endtime="20231116 13:31:40.556"/>
+<msg timestamp="20231117 11:30:48.103" level="INFO">Typing text 'une rue' into text field 'id=address'.</msg>
+<status status="PASS" starttime="20231117 11:30:48.103" endtime="20231117 11:30:48.180"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:40.486" endtime="20231116 13:31:40.556"/>
+<status status="PASS" starttime="20231117 11:30:48.103" endtime="20231117 11:30:48.180"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:40.486" endtime="20231116 13:31:40.556"/>
+<status status="PASS" starttime="20231117 11:30:48.103" endtime="20231117 11:30:48.180"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:40.486" endtime="20231116 13:31:40.556"/>
+<status status="PASS" starttime="20231117 11:30:48.102" endtime="20231117 11:30:48.180"/>
 </kw>
 <kw name="User input city" library="FindOwnersPage">
 <arg>${city}</arg>
+<doc>Enter city if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${city}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtCity}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:40.557" level="INFO">Typing text 'todo' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20231116 13:31:40.557" endtime="20231116 13:31:40.599"/>
+<msg timestamp="20231117 11:30:48.180" level="INFO">Typing text 'todo' into text field 'id=city'.</msg>
+<status status="PASS" starttime="20231117 11:30:48.180" endtime="20231117 11:30:48.224"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:40.556" endtime="20231116 13:31:40.599"/>
+<status status="PASS" starttime="20231117 11:30:48.180" endtime="20231117 11:30:48.224"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:40.556" endtime="20231116 13:31:40.599"/>
+<status status="PASS" starttime="20231117 11:30:48.180" endtime="20231117 11:30:48.224"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:40.556" endtime="20231116 13:31:40.599"/>
+<status status="PASS" starttime="20231117 11:30:48.180" endtime="20231117 11:30:48.224"/>
 </kw>
 <kw name="User input telephone" library="FindOwnersPage">
 <arg>${telephone}</arg>
+<doc>Enter telephone if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${telephone}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtTelephone}</arg>
 <arg>${telephone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:40.600" level="INFO">Typing text '0145874563' into text field 'id=telephone'.</msg>
-<status status="PASS" starttime="20231116 13:31:40.600" endtime="20231116 13:31:40.677"/>
+<msg timestamp="20231117 11:30:48.224" level="INFO">Typing text '0145874563' into text field 'id=telephone'.</msg>
+<status status="PASS" starttime="20231117 11:30:48.224" endtime="20231117 11:30:48.300"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:40.600" endtime="20231116 13:31:40.677"/>
+<status status="PASS" starttime="20231117 11:30:48.224" endtime="20231117 11:30:48.300"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:40.600" endtime="20231116 13:31:40.677"/>
+<status status="PASS" starttime="20231117 11:30:48.224" endtime="20231117 11:30:48.300"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:40.599" endtime="20231116 13:31:40.677"/>
+<status status="PASS" starttime="20231117 11:30:48.224" endtime="20231117 11:30:48.300"/>
 </kw>
 <kw name="User click button Create owner" library="FindOwnersPage">
+<doc>Click button "Add owner"</doc>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnSubmit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:40.678" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
-<status status="PASS" starttime="20231116 13:31:40.678" endtime="20231116 13:31:41.657"/>
+<msg timestamp="20231117 11:30:48.300" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
+<status status="PASS" starttime="20231117 11:30:48.300" endtime="20231117 11:30:49.193"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:40.677" endtime="20231116 13:31:41.657"/>
+<status status="PASS" starttime="20231117 11:30:48.300" endtime="20231117 11:30:49.193"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:39.554" endtime="20231116 13:31:41.657"/>
+<status status="PASS" starttime="20231117 11:30:47.144" endtime="20231117 11:30:49.193"/>
 </kw>
-<kw name="Then Verify user's information is correct" library="FindOwnersPage">
+<kw name="Then Table Owner information should displays" library="FindOwnersPage">
+<doc>Verify "Owner Information" table displays</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${tableNewOwnerInfo}</arg>
+<arg>${tableOwnerInfo}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20231116 13:31:41.712" level="INFO">Element 'xpath=//h2[contains(text(),'Owner')]' is displayed.</msg>
-<status status="PASS" starttime="20231116 13:31:41.658" endtime="20231116 13:31:41.712"/>
+<msg timestamp="20231117 11:30:49.233" level="INFO">Element 'xpath=//h2[text()='Owner Information']' is displayed.</msg>
+<status status="PASS" starttime="20231117 11:30:49.194" endtime="20231117 11:30:49.233"/>
 </kw>
+<status status="PASS" starttime="20231117 11:30:49.194" endtime="20231117 11:30:49.233"/>
+</kw>
+<kw name="And Name should same as Firstname and Lastname filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Name" field corresponds to Firstname and Lastname</doc>
 <kw name="Catenate" library="BuiltIn">
 <var>${name}</var>
 <arg>${firstname}</arg>
 <arg>${lastname}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<msg timestamp="20231116 13:31:41.712" level="INFO">${name} = toto paul</msg>
-<status status="PASS" starttime="20231116 13:31:41.712" endtime="20231116 13:31:41.712"/>
+<msg timestamp="20231117 11:30:49.234" level="INFO">${name} = toto paul</msg>
+<status status="PASS" starttime="20231117 11:30:49.233" endtime="20231117 11:30:49.234"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblName}</arg>
 <arg>${name}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:41.712" level="INFO">Verifying element 'xpath=//th[text()='Name']/following::b' contains exact text 'toto paul'.</msg>
-<status status="PASS" starttime="20231116 13:31:41.712" endtime="20231116 13:31:41.770"/>
+<msg timestamp="20231117 11:30:49.234" level="INFO">Verifying element 'xpath=//th[text()='Name']/following::b' contains exact text 'toto paul'.</msg>
+<status status="PASS" starttime="20231117 11:30:49.234" endtime="20231117 11:30:49.286"/>
 </kw>
+<status status="PASS" starttime="20231117 11:30:49.233" endtime="20231117 11:30:49.286"/>
+</kw>
+<kw name="And Address should same as Address filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Address" field corresponds to Address</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblAddress}</arg>
 <arg>${address}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:41.771" level="INFO">Verifying element 'xpath=//th[text()='Address']/following::td[1]' contains exact text 'une rue'.</msg>
-<status status="PASS" starttime="20231116 13:31:41.771" endtime="20231116 13:31:41.832"/>
+<msg timestamp="20231117 11:30:49.287" level="INFO">Verifying element 'xpath=//th[text()='Address']/following::td[1]' contains exact text 'une rue'.</msg>
+<status status="PASS" starttime="20231117 11:30:49.286" endtime="20231117 11:30:49.352"/>
 </kw>
+<status status="PASS" starttime="20231117 11:30:49.286" endtime="20231117 11:30:49.352"/>
+</kw>
+<kw name="And City should same as City filled in previous screen" library="FindOwnersPage">
+<doc>Verify "City" field corresponds to City</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblCity}</arg>
 <arg>${city}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:41.832" level="INFO">Verifying element 'xpath=//th[text()='City']/following::td[1]' contains exact text 'todo'.</msg>
-<status status="PASS" starttime="20231116 13:31:41.832" endtime="20231116 13:31:41.845"/>
+<msg timestamp="20231117 11:30:49.353" level="INFO">Verifying element 'xpath=//th[text()='City']/following::td[1]' contains exact text 'todo'.</msg>
+<status status="PASS" starttime="20231117 11:30:49.352" endtime="20231117 11:30:49.364"/>
 </kw>
+<status status="PASS" starttime="20231117 11:30:49.352" endtime="20231117 11:30:49.364"/>
+</kw>
+<kw name="And Telephone should same as Telephone filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Telephone" field corresponds to Telephone</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblTelephone}</arg>
 <arg>${telephone}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:41.845" level="INFO">Verifying element 'xpath=//th[text()='Telephone']/following::td[1]' contains exact text '0145874563'.</msg>
-<status status="PASS" starttime="20231116 13:31:41.845" endtime="20231116 13:31:41.857"/>
+<msg timestamp="20231117 11:30:49.365" level="INFO">Verifying element 'xpath=//th[text()='Telephone']/following::td[1]' contains exact text '0145874563'.</msg>
+<status status="PASS" starttime="20231117 11:30:49.364" endtime="20231117 11:30:49.376"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:41.658" endtime="20231116 13:31:41.857"/>
+<status status="PASS" starttime="20231117 11:30:49.364" endtime="20231117 11:30:49.376"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20231116 13:31:41.857" endtime="20231116 13:31:41.939"/>
+<status status="PASS" starttime="20231117 11:30:49.376" endtime="20231117 11:30:49.442"/>
 </kw>
 <tag>Sc02</tag>
-<status status="PASS" starttime="20231116 13:31:28.917" endtime="20231116 13:31:41.939"/>
+<status status="PASS" starttime="20231117 11:30:36.429" endtime="20231117 11:30:49.442"/>
 </test>
-<test id="s1-t3" name="Sc03: Search owner" line="20">
+<test id="s1-t3" name="Sc03: Search owner" line="24">
 <kw name="Given User open &quot;Find owners&quot; menu" library="FindOwnersPage" type="SETUP">
+<doc>Open website
+Click button "Find owners" on navigation bar
+Wait until search owner form displays</doc>
 <kw name="User open petclinic website" library="HomePage">
+<doc>Open and wait until homepage display</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231116 13:31:41.940" level="INFO">Opening browser 'chrome' to base url 'https://petclinic.justdev.tech/'.</msg>
-<status status="PASS" starttime="20231116 13:31:41.940" endtime="20231116 13:31:53.803"/>
+<msg timestamp="20231117 11:30:49.443" level="INFO">Opening browser 'chrome' to base url 'https://petclinic.justdev.tech/'.</msg>
+<status status="PASS" starttime="20231117 11:30:49.443" endtime="20231117 11:30:57.865"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231116 13:31:53.803" endtime="20231116 13:31:54.266"/>
+<status status="PASS" starttime="20231117 11:30:57.865" endtime="20231117 11:30:58.318"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${imgWelcome}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:54.266" endtime="20231116 13:31:54.411"/>
+<status status="PASS" starttime="20231117 11:30:58.319" endtime="20231117 11:30:58.469"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:41.940" endtime="20231116 13:31:54.411"/>
+<status status="PASS" starttime="20231117 11:30:49.443" endtime="20231117 11:30:58.469"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnFindOwners}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:54.411" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
-<status status="PASS" starttime="20231116 13:31:54.411" endtime="20231116 13:31:55.047"/>
+<msg timestamp="20231117 11:30:58.470" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
+<status status="PASS" starttime="20231117 11:30:58.469" endtime="20231117 11:30:59.110"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchOwnerForm}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:55.047" endtime="20231116 13:31:55.096"/>
+<status status="PASS" starttime="20231117 11:30:59.110" endtime="20231117 11:30:59.161"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:41.940" endtime="20231116 13:31:55.096"/>
+<status status="PASS" starttime="20231117 11:30:49.442" endtime="20231117 11:30:59.161"/>
 </kw>
 <kw name="Generate Random String" library="String">
 <var>${lastname}</var>
 <arg>10</arg>
 <arg>[LETTERS]</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20231116 13:31:55.097" level="INFO">${lastname} = DOVTvSQPLs</msg>
-<status status="PASS" starttime="20231116 13:31:55.097" endtime="20231116 13:31:55.097"/>
+<msg timestamp="20231117 11:30:59.161" level="INFO">${lastname} = blcYDfOids</msg>
+<status status="PASS" starttime="20231117 11:30:59.161" endtime="20231117 11:30:59.161"/>
 </kw>
 <kw name="When User create owner first name:&quot;preData&quot;, last name:&quot;${lastname}&quot;, adress:&quot;preData&quot;, city:&quot;preData&quot;, telephone: &quot;0145874565&quot;" library="FindOwnersPage" sourcename="User create owner first name:&quot;${firstname}&quot;, last name:&quot;${lastname}&quot;, adress:&quot;${address}&quot;, city:&quot;${city}&quot;, telephone: &quot;${telephone}&quot;">
+<doc>Set global variables for owner information
+Enter info into form and click button "Add owner"</doc>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${firstname}</arg>
 <arg>${firstname}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:55.097" level="INFO">${firstname} = preData</msg>
-<status status="PASS" starttime="20231116 13:31:55.097" endtime="20231116 13:31:55.097"/>
+<msg timestamp="20231117 11:30:59.161" level="INFO">${firstname} = preData</msg>
+<status status="PASS" starttime="20231117 11:30:59.161" endtime="20231117 11:30:59.161"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${lastname}</arg>
 <arg>${lastname}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:55.097" level="INFO">${lastname} = DOVTvSQPLs</msg>
-<status status="PASS" starttime="20231116 13:31:55.097" endtime="20231116 13:31:55.097"/>
+<msg timestamp="20231117 11:30:59.161" level="INFO">${lastname} = blcYDfOids</msg>
+<status status="PASS" starttime="20231117 11:30:59.161" endtime="20231117 11:30:59.161"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${address}</arg>
 <arg>${address}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:55.097" level="INFO">${address} = preData</msg>
-<status status="PASS" starttime="20231116 13:31:55.097" endtime="20231116 13:31:55.097"/>
+<msg timestamp="20231117 11:30:59.162" level="INFO">${address} = preData</msg>
+<status status="PASS" starttime="20231117 11:30:59.161" endtime="20231117 11:30:59.162"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${city}</arg>
 <arg>${city}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:55.097" level="INFO">${city} = preData</msg>
-<status status="PASS" starttime="20231116 13:31:55.097" endtime="20231116 13:31:55.097"/>
+<msg timestamp="20231117 11:30:59.162" level="INFO">${city} = preData</msg>
+<status status="PASS" starttime="20231117 11:30:59.162" endtime="20231117 11:30:59.162"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${telephone}</arg>
 <arg>${telephone}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20231116 13:31:55.098" level="INFO">${telephone} = 0145874565</msg>
-<status status="PASS" starttime="20231116 13:31:55.097" endtime="20231116 13:31:55.098"/>
+<msg timestamp="20231117 11:30:59.162" level="INFO">${telephone} = 0145874565</msg>
+<status status="PASS" starttime="20231117 11:30:59.162" endtime="20231117 11:30:59.162"/>
 </kw>
 <kw name="User click button Add owner" library="FindOwnersPage">
+<doc>Click button "Add owner"</doc>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnAddOwner}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:55.098" level="INFO">Clicking element 'css=a[href='/owners/new']'.</msg>
-<status status="PASS" starttime="20231116 13:31:55.098" endtime="20231116 13:31:55.583"/>
+<msg timestamp="20231117 11:30:59.162" level="INFO">Clicking element 'css=a[href='/owners/new']'.</msg>
+<status status="PASS" starttime="20231117 11:30:59.162" endtime="20231117 11:30:59.542"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${addOwnerForm}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:55.583" endtime="20231116 13:31:55.615"/>
+<status status="PASS" starttime="20231117 11:30:59.542" endtime="20231117 11:30:59.571"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:55.098" endtime="20231116 13:31:55.615"/>
+<status status="PASS" starttime="20231117 11:30:59.162" endtime="20231117 11:30:59.571"/>
 </kw>
 <kw name="User input firstname" library="FindOwnersPage">
 <arg>${firstname}</arg>
+<doc>Enter firstname if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${firstname}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtFirstname}</arg>
 <arg>${firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:55.616" level="INFO">Typing text 'preData' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20231116 13:31:55.616" endtime="20231116 13:31:55.882"/>
+<msg timestamp="20231117 11:30:59.572" level="INFO">Typing text 'preData' into text field 'id=firstName'.</msg>
+<status status="PASS" starttime="20231117 11:30:59.572" endtime="20231117 11:30:59.830"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:55.615" endtime="20231116 13:31:55.882"/>
+<status status="PASS" starttime="20231117 11:30:59.572" endtime="20231117 11:30:59.830"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:55.615" endtime="20231116 13:31:55.882"/>
+<status status="PASS" starttime="20231117 11:30:59.572" endtime="20231117 11:30:59.830"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:55.615" endtime="20231116 13:31:55.882"/>
+<status status="PASS" starttime="20231117 11:30:59.571" endtime="20231117 11:30:59.830"/>
 </kw>
 <kw name="User input lastname" library="FindOwnersPage">
 <arg>${lastname}</arg>
+<doc>Enter lastname if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${lastname}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtLastname}</arg>
 <arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:55.883" level="INFO">Typing text 'DOVTvSQPLs' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20231116 13:31:55.883" endtime="20231116 13:31:56.106"/>
+<msg timestamp="20231117 11:30:59.831" level="INFO">Typing text 'blcYDfOids' into text field 'id=lastName'.</msg>
+<status status="PASS" starttime="20231117 11:30:59.831" endtime="20231117 11:31:00.047"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:55.882" endtime="20231116 13:31:56.107"/>
+<status status="PASS" starttime="20231117 11:30:59.830" endtime="20231117 11:31:00.047"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:55.882" endtime="20231116 13:31:56.107"/>
+<status status="PASS" starttime="20231117 11:30:59.830" endtime="20231117 11:31:00.047"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:55.882" endtime="20231116 13:31:56.107"/>
+<status status="PASS" starttime="20231117 11:30:59.830" endtime="20231117 11:31:00.047"/>
 </kw>
 <kw name="User input address" library="FindOwnersPage">
 <arg>${address}</arg>
+<doc>Enter address if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${address}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtAddress}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:56.107" level="INFO">Typing text 'preData' into text field 'id=address'.</msg>
-<status status="PASS" starttime="20231116 13:31:56.107" endtime="20231116 13:31:56.206"/>
+<msg timestamp="20231117 11:31:00.047" level="INFO">Typing text 'preData' into text field 'id=address'.</msg>
+<status status="PASS" starttime="20231117 11:31:00.047" endtime="20231117 11:31:00.148"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:56.107" endtime="20231116 13:31:56.206"/>
+<status status="PASS" starttime="20231117 11:31:00.047" endtime="20231117 11:31:00.148"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:56.107" endtime="20231116 13:31:56.206"/>
+<status status="PASS" starttime="20231117 11:31:00.047" endtime="20231117 11:31:00.148"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:56.107" endtime="20231116 13:31:56.206"/>
+<status status="PASS" starttime="20231117 11:31:00.047" endtime="20231117 11:31:00.148"/>
 </kw>
 <kw name="User input city" library="FindOwnersPage">
 <arg>${city}</arg>
+<doc>Enter city if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${city}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtCity}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:56.206" level="INFO">Typing text 'preData' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20231116 13:31:56.206" endtime="20231116 13:31:56.270"/>
+<msg timestamp="20231117 11:31:00.148" level="INFO">Typing text 'preData' into text field 'id=city'.</msg>
+<status status="PASS" starttime="20231117 11:31:00.148" endtime="20231117 11:31:00.206"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:56.206" endtime="20231116 13:31:56.270"/>
+<status status="PASS" starttime="20231117 11:31:00.148" endtime="20231117 11:31:00.206"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:56.206" endtime="20231116 13:31:56.270"/>
+<status status="PASS" starttime="20231117 11:31:00.148" endtime="20231117 11:31:00.206"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:56.206" endtime="20231116 13:31:56.271"/>
+<status status="PASS" starttime="20231117 11:31:00.148" endtime="20231117 11:31:00.206"/>
 </kw>
 <kw name="User input telephone" library="FindOwnersPage">
 <arg>${telephone}</arg>
+<doc>Enter telephone if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${telephone}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtTelephone}</arg>
 <arg>${telephone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:56.271" level="INFO">Typing text '0145874565' into text field 'id=telephone'.</msg>
-<status status="PASS" starttime="20231116 13:31:56.271" endtime="20231116 13:31:56.326"/>
+<msg timestamp="20231117 11:31:00.206" level="INFO">Typing text '0145874565' into text field 'id=telephone'.</msg>
+<status status="PASS" starttime="20231117 11:31:00.206" endtime="20231117 11:31:00.262"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:56.271" endtime="20231116 13:31:56.326"/>
+<status status="PASS" starttime="20231117 11:31:00.206" endtime="20231117 11:31:00.262"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:56.271" endtime="20231116 13:31:56.326"/>
+<status status="PASS" starttime="20231117 11:31:00.206" endtime="20231117 11:31:00.262"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:56.271" endtime="20231116 13:31:56.326"/>
+<status status="PASS" starttime="20231117 11:31:00.206" endtime="20231117 11:31:00.262"/>
 </kw>
 <kw name="User click button Create owner" library="FindOwnersPage">
+<doc>Click button "Add owner"</doc>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnSubmit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:56.326" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
-<status status="PASS" starttime="20231116 13:31:56.326" endtime="20231116 13:31:57.108"/>
+<msg timestamp="20231117 11:31:00.263" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
+<status status="PASS" starttime="20231117 11:31:00.263" endtime="20231117 11:31:01.149"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:56.326" endtime="20231116 13:31:57.108"/>
+<status status="PASS" starttime="20231117 11:31:00.262" endtime="20231117 11:31:01.149"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:55.097" endtime="20231116 13:31:57.108"/>
+<status status="PASS" starttime="20231117 11:30:59.161" endtime="20231117 11:31:01.149"/>
 </kw>
-<kw name="Then Verify user's information is correct" library="FindOwnersPage">
+<kw name="Then Table Owner information should displays" library="FindOwnersPage">
+<doc>Verify "Owner Information" table displays</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${tableNewOwnerInfo}</arg>
+<arg>${tableOwnerInfo}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20231116 13:31:57.152" level="INFO">Element 'xpath=//h2[contains(text(),'Owner')]' is displayed.</msg>
-<status status="PASS" starttime="20231116 13:31:57.108" endtime="20231116 13:31:57.152"/>
+<msg timestamp="20231117 11:31:01.187" level="INFO">Element 'xpath=//h2[text()='Owner Information']' is displayed.</msg>
+<status status="PASS" starttime="20231117 11:31:01.149" endtime="20231117 11:31:01.187"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:01.149" endtime="20231117 11:31:01.187"/>
+</kw>
+<kw name="And Name should same as Firstname and Lastname filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Name" field corresponds to Firstname and Lastname</doc>
 <kw name="Catenate" library="BuiltIn">
 <var>${name}</var>
 <arg>${firstname}</arg>
 <arg>${lastname}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<msg timestamp="20231116 13:31:57.152" level="INFO">${name} = preData DOVTvSQPLs</msg>
-<status status="PASS" starttime="20231116 13:31:57.152" endtime="20231116 13:31:57.153"/>
+<msg timestamp="20231117 11:31:01.187" level="INFO">${name} = preData blcYDfOids</msg>
+<status status="PASS" starttime="20231117 11:31:01.187" endtime="20231117 11:31:01.187"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblName}</arg>
 <arg>${name}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:57.153" level="INFO">Verifying element 'xpath=//th[text()='Name']/following::b' contains exact text 'preData DOVTvSQPLs'.</msg>
-<status status="PASS" starttime="20231116 13:31:57.153" endtime="20231116 13:31:57.210"/>
+<msg timestamp="20231117 11:31:01.187" level="INFO">Verifying element 'xpath=//th[text()='Name']/following::b' contains exact text 'preData blcYDfOids'.</msg>
+<status status="PASS" starttime="20231117 11:31:01.187" endtime="20231117 11:31:01.240"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:01.187" endtime="20231117 11:31:01.240"/>
+</kw>
+<kw name="And Address should same as Address filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Address" field corresponds to Address</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblAddress}</arg>
 <arg>${address}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:57.211" level="INFO">Verifying element 'xpath=//th[text()='Address']/following::td[1]' contains exact text 'preData'.</msg>
-<status status="PASS" starttime="20231116 13:31:57.210" endtime="20231116 13:31:57.274"/>
+<msg timestamp="20231117 11:31:01.241" level="INFO">Verifying element 'xpath=//th[text()='Address']/following::td[1]' contains exact text 'preData'.</msg>
+<status status="PASS" starttime="20231117 11:31:01.241" endtime="20231117 11:31:01.303"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:01.240" endtime="20231117 11:31:01.303"/>
+</kw>
+<kw name="And City should same as City filled in previous screen" library="FindOwnersPage">
+<doc>Verify "City" field corresponds to City</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblCity}</arg>
 <arg>${city}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:57.275" level="INFO">Verifying element 'xpath=//th[text()='City']/following::td[1]' contains exact text 'preData'.</msg>
-<status status="PASS" starttime="20231116 13:31:57.274" endtime="20231116 13:31:57.286"/>
+<msg timestamp="20231117 11:31:01.304" level="INFO">Verifying element 'xpath=//th[text()='City']/following::td[1]' contains exact text 'preData'.</msg>
+<status status="PASS" starttime="20231117 11:31:01.303" endtime="20231117 11:31:01.314"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:01.303" endtime="20231117 11:31:01.314"/>
+</kw>
+<kw name="And Telephone should same as Telephone filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Telephone" field corresponds to Telephone</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblTelephone}</arg>
 <arg>${telephone}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:57.287" level="INFO">Verifying element 'xpath=//th[text()='Telephone']/following::td[1]' contains exact text '0145874565'.</msg>
-<status status="PASS" starttime="20231116 13:31:57.286" endtime="20231116 13:31:57.297"/>
+<msg timestamp="20231117 11:31:01.315" level="INFO">Verifying element 'xpath=//th[text()='Telephone']/following::td[1]' contains exact text '0145874565'.</msg>
+<status status="PASS" starttime="20231117 11:31:01.315" endtime="20231117 11:31:01.326"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:57.108" endtime="20231116 13:31:57.297"/>
+<status status="PASS" starttime="20231117 11:31:01.314" endtime="20231117 11:31:01.326"/>
 </kw>
 <kw name="When User search owner" library="FindOwnersPage">
+<doc>Click button "Find owners" on navigation bar</doc>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnFindOwners}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:57.298" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
-<status status="PASS" starttime="20231116 13:31:57.298" endtime="20231116 13:31:57.726"/>
+<msg timestamp="20231117 11:31:01.326" level="INFO">Clicking element 'css=a[href="/owners/find"]'.</msg>
+<status status="PASS" starttime="20231117 11:31:01.326" endtime="20231117 11:31:01.732"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchOwnerForm}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231116 13:31:57.726" endtime="20231116 13:31:57.751"/>
+<status status="PASS" starttime="20231117 11:31:01.732" endtime="20231117 11:31:01.757"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:57.297" endtime="20231116 13:31:57.751"/>
+<status status="PASS" starttime="20231117 11:31:01.326" endtime="20231117 11:31:01.757"/>
 </kw>
 <kw name="And User search for previously created owner" library="FindOwnersPage">
+<doc>Search owner with Lastname
+Wait until owner information table displays</doc>
 <kw name="User input lastname" library="FindOwnersPage">
 <arg>${lastname}</arg>
+<doc>Enter lastname if value is not empty</doc>
 <if>
 <branch type="IF" condition="&quot;${lastname}&quot; != &quot;${EMPTY}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txtLastname}</arg>
 <arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:57.752" level="INFO">Typing text 'DOVTvSQPLs' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20231116 13:31:57.751" endtime="20231116 13:31:57.824"/>
+<msg timestamp="20231117 11:31:01.758" level="INFO">Typing text 'blcYDfOids' into text field 'id=lastName'.</msg>
+<status status="PASS" starttime="20231117 11:31:01.758" endtime="20231117 11:31:01.816"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:57.751" endtime="20231116 13:31:57.824"/>
+<status status="PASS" starttime="20231117 11:31:01.757" endtime="20231117 11:31:01.816"/>
 </branch>
-<status status="PASS" starttime="20231116 13:31:57.751" endtime="20231116 13:31:57.824"/>
+<status status="PASS" starttime="20231117 11:31:01.757" endtime="20231117 11:31:01.816"/>
 </if>
-<status status="PASS" starttime="20231116 13:31:57.751" endtime="20231116 13:31:57.824"/>
+<status status="PASS" starttime="20231117 11:31:01.757" endtime="20231117 11:31:01.816"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnSubmit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231116 13:31:57.825" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
-<status status="PASS" starttime="20231116 13:31:57.824" endtime="20231116 13:31:58.476"/>
+<msg timestamp="20231117 11:31:01.817" level="INFO">Clicking element 'css=button[type='submit']'.</msg>
+<status status="PASS" starttime="20231117 11:31:01.816" endtime="20231117 11:31:02.522"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${tableNewOwnerInfo}</arg>
+<arg>${tableOwnerInfo}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20231116 13:31:58.517" level="INFO">Element 'xpath=//h2[contains(text(),'Owner')]' is displayed.</msg>
-<status status="PASS" starttime="20231116 13:31:58.476" endtime="20231116 13:31:58.517"/>
+<msg timestamp="20231117 11:31:02.561" level="INFO">Element 'xpath=//h2[text()='Owner Information']' is displayed.</msg>
+<status status="PASS" starttime="20231117 11:31:02.522" endtime="20231117 11:31:02.561"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:57.751" endtime="20231116 13:31:58.517"/>
+<status status="PASS" starttime="20231117 11:31:01.757" endtime="20231117 11:31:02.561"/>
 </kw>
-<kw name="Then Verify user's information is correct" library="FindOwnersPage">
+<kw name="Then Table Owner information should displays" library="FindOwnersPage">
+<doc>Verify "Owner Information" table displays</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${tableNewOwnerInfo}</arg>
+<arg>${tableOwnerInfo}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20231116 13:31:58.528" level="INFO">Element 'xpath=//h2[contains(text(),'Owner')]' is displayed.</msg>
-<status status="PASS" starttime="20231116 13:31:58.517" endtime="20231116 13:31:58.528"/>
+<msg timestamp="20231117 11:31:02.576" level="INFO">Element 'xpath=//h2[text()='Owner Information']' is displayed.</msg>
+<status status="PASS" starttime="20231117 11:31:02.562" endtime="20231117 11:31:02.576"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:02.561" endtime="20231117 11:31:02.576"/>
+</kw>
+<kw name="And Name should same as Firstname and Lastname filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Name" field corresponds to Firstname and Lastname</doc>
 <kw name="Catenate" library="BuiltIn">
 <var>${name}</var>
 <arg>${firstname}</arg>
 <arg>${lastname}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<msg timestamp="20231116 13:31:58.528" level="INFO">${name} = preData DOVTvSQPLs</msg>
-<status status="PASS" starttime="20231116 13:31:58.528" endtime="20231116 13:31:58.528"/>
+<msg timestamp="20231117 11:31:02.576" level="INFO">${name} = preData blcYDfOids</msg>
+<status status="PASS" starttime="20231117 11:31:02.576" endtime="20231117 11:31:02.576"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblName}</arg>
 <arg>${name}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:58.528" level="INFO">Verifying element 'xpath=//th[text()='Name']/following::b' contains exact text 'preData DOVTvSQPLs'.</msg>
-<status status="PASS" starttime="20231116 13:31:58.528" endtime="20231116 13:31:58.562"/>
+<msg timestamp="20231117 11:31:02.576" level="INFO">Verifying element 'xpath=//th[text()='Name']/following::b' contains exact text 'preData blcYDfOids'.</msg>
+<status status="PASS" starttime="20231117 11:31:02.576" endtime="20231117 11:31:02.610"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:02.576" endtime="20231117 11:31:02.610"/>
+</kw>
+<kw name="And Address should same as Address filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Address" field corresponds to Address</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblAddress}</arg>
 <arg>${address}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:58.562" level="INFO">Verifying element 'xpath=//th[text()='Address']/following::td[1]' contains exact text 'preData'.</msg>
-<status status="PASS" starttime="20231116 13:31:58.562" endtime="20231116 13:31:58.596"/>
+<msg timestamp="20231117 11:31:02.610" level="INFO">Verifying element 'xpath=//th[text()='Address']/following::td[1]' contains exact text 'preData'.</msg>
+<status status="PASS" starttime="20231117 11:31:02.610" endtime="20231117 11:31:02.641"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:02.610" endtime="20231117 11:31:02.641"/>
+</kw>
+<kw name="And City should same as City filled in previous screen" library="FindOwnersPage">
+<doc>Verify "City" field corresponds to City</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblCity}</arg>
 <arg>${city}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:58.596" level="INFO">Verifying element 'xpath=//th[text()='City']/following::td[1]' contains exact text 'preData'.</msg>
-<status status="PASS" starttime="20231116 13:31:58.596" endtime="20231116 13:31:58.627"/>
+<msg timestamp="20231117 11:31:02.641" level="INFO">Verifying element 'xpath=//th[text()='City']/following::td[1]' contains exact text 'preData'.</msg>
+<status status="PASS" starttime="20231117 11:31:02.641" endtime="20231117 11:31:02.672"/>
 </kw>
+<status status="PASS" starttime="20231117 11:31:02.641" endtime="20231117 11:31:02.672"/>
+</kw>
+<kw name="And Telephone should same as Telephone filled in previous screen" library="FindOwnersPage">
+<doc>Verify "Telephone" field corresponds to Telephone</doc>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lblTelephone}</arg>
 <arg>${telephone}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231116 13:31:58.627" level="INFO">Verifying element 'xpath=//th[text()='Telephone']/following::td[1]' contains exact text '0145874565'.</msg>
-<status status="PASS" starttime="20231116 13:31:58.627" endtime="20231116 13:31:58.658"/>
+<msg timestamp="20231117 11:31:02.672" level="INFO">Verifying element 'xpath=//th[text()='Telephone']/following::td[1]' contains exact text '0145874565'.</msg>
+<status status="PASS" starttime="20231117 11:31:02.672" endtime="20231117 11:31:02.702"/>
 </kw>
-<status status="PASS" starttime="20231116 13:31:58.517" endtime="20231116 13:31:58.658"/>
+<status status="PASS" starttime="20231117 11:31:02.672" endtime="20231117 11:31:02.702"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20231116 13:31:58.658" endtime="20231116 13:31:58.727"/>
+<status status="PASS" starttime="20231117 11:31:02.702" endtime="20231117 11:31:02.772"/>
 </kw>
 <tag>Sc03</tag>
-<status status="PASS" starttime="20231116 13:31:41.940" endtime="20231116 13:31:58.727"/>
+<status status="PASS" starttime="20231117 11:30:49.442" endtime="20231117 11:31:02.772"/>
 </test>
-<status status="PASS" starttime="20231116 13:31:15.613" endtime="20231116 13:31:58.727"/>
+<status status="PASS" starttime="20231117 11:29:51.701" endtime="20231117 11:31:02.773"/>
 </suite>
 <statistics>
 <total>
@@ -793,6 +888,5 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231116 13:31:15.624" level="ERROR">Error in file '/Users/Admin/Documents/Automation/Robot/petclinic/resources/HomePage.resource' on line 15: Creating keyword 'Close all browser' failed: User keyword cannot be empty.</msg>
 </errors>
 </robot>
