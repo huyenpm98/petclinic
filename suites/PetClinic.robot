@@ -5,7 +5,7 @@ Resource    ../resources/FindOwnersPage.resource
 Test Setup  Given User open "Find owners" menu
 Test Teardown   Close All Browsers
 
-***Test Case***
+*** Test Cases ***
 
 Sc01: Warning message when fill forbidden data
     [Tags]     Sc01
