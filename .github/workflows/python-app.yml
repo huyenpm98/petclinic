@@ -29,7 +29,8 @@ jobs:
           pip install robotframework
           pip install robotframework-seleniumlibrary
     - name: Test with RobotFramework
-        run: robot .  
+        run: |
+          robot .  
     - name: Test Report Generation
         uses: actions/upload-artifact@v4
         if: success() || failure()
